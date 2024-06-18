@@ -1996,7 +1996,7 @@ MonoBehaviour:
   castDistance: 1
   bulletPrefab: {fileID: 5561919485935867987, guid: e23570047d4af72479f5c95827dbe0d1, type: 3}
   bulletSpawnPoint: {fileID: 1339155973}
-  bulletSpeed: 10
+  bulletSpeed: 20
 --- !u!95 &1591011704
 Animator:
   serializedVersion: 4
