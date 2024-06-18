@@ -20,6 +20,12 @@ public class BulletManager : MonoBehaviour
         {
             // Знищити кулю при зіткненні з об'єктом
             Destroy(gameObject);
+
+            // Знищення стіни з тегом
+            if (collision.CompareTag("DestructibleWall"))
+            {
+                Destroy(collision.gameObject);
+            }
         }
     }
 }
