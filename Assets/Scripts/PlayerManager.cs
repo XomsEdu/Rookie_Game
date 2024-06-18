@@ -90,15 +90,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos() // цей метод візуально відображає рейкаст який перевіряє поверхню під ногами персонажа
-    {
-        Vector2 boxOrigin = transform.position; // transform це компонент в якому зберігаються значення позиції, розміру і оберту навколо осі
-        Vector2 boxDirection = -transform.up;
-
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(boxOrigin - new Vector2(0f, castDistance / 2f), groundBoxCast); // це рендер рейкасту
-    }
-
     private void GroundCheck() // цей метод вимальовує рейкаст який перевіряє поверхню
     {
         Vector2 boxOrigin = transform.position;
@@ -151,6 +142,8 @@ public class PlayerManager : MonoBehaviour
             {
                 bulletRb.velocity = new Vector2(-bulletSpeed, 0);
             }
+
+            inputManager.isFire = false;
         }
     }
 }
