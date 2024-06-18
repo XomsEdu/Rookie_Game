@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    InputController inputController;
+    InputController inputController; //посилання на згенерований юніті скрипт клавіш вводу
 
-    public Vector2 movementInput;
-    public bool isJump;
+    public Vector2 movementInput; //векторне значення XY
+    public bool isJump; //змінні значення true/false
     public bool isFire;
 
     private void OnEnable()
