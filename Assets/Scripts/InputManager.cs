@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
 
     public Vector2 movementInput;
     public bool isJump;
+    public bool isFire;
 
     private void OnEnable()
     {
@@ -20,6 +21,8 @@ public class InputManager : MonoBehaviour
             inputController.Movement.Jump.performed += i => isJump = true; //Jump
             inputController.Movement.Jump.canceled += i => isJump = false;
 
+            inputController.Movement.Fire.performed += i => isFire = true; //Shoot
+            inputController.Movement.Fire.canceled += i => isFire = false;
             
         }
 
